@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty Web Development Workshop 2026</title>
+</head>
+<!-- Header Section -->
+<header>
+    <h1>Faculty Web Development Workshop 2026</h1>
+    <p>Empowering students to build modern and accessible web application</p>
+</header>
+
+<!-- Navigation Bar -->
+<nav>
+    <a href="#about">About</a> |
+    <a href="#schedule">Schedule</a> |
+    <a href="#register">Register</a>
+</nav>
+
+<!-- Main Content Area -->
+<main>
+
+    <!-- Section 1: About the Event -->
+    <section id="about">
+        <h2>About the Event</h2>
+        <p>Please join us for a full-day workshop covering core web technologies, hands-on lab sessions, and mentorship from industry professionals.</p>
+        
+        <!-- Article 1: Keynote Speaker -->
+        <article>
+            <h3>Keynote Speaker: Dr Sandra</h3>
+            <p>Dr Sandra is a Senior Software Engineer at TechCloud with over 10 years of experience in distributed systems and modern web architecture.</p>
+        </article>
+        
+        <!-- Article 2: Hands-on Activity -->
+        <article>
+            <h3>Hands-on Activity: Speed Coding Challenge</h3>
+            <p>Test your front-end structuring and problem solving skills in our timed mini-hackathon, the winner will get the top prize.</p>
+        </article>
+    </section>
+
+    <!-- Section 2: Event Schedule Table -->
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+        <table border="1">
+            <tr>
+                <th>Time</th>
+                <th>Activity</th>
+                <th>Venue</th>
+                <th>Person in Charge</th>
+            </tr>
+
+            <tr>
+                <td>8:00 AM - 9:00 AM</td>
+                <td>Participant Registration &amp; Breakfast</td>
+                <td>Main Foyer</td>
+                <td>Mr. Adam Lee</td>
+            </tr>
+
+            <tr>
+                <td>9:00 AM - 10:30 AM</td>
+                <td>Opening Keynote: The Future of the Web</td>
+                <td rowspan="2">Main Hall</td>
+                <td>Dr Sandra</td>
+            </tr>
+
+            <tr>
+                <td>10:30 AM - 12:30 PM</td>
+                <td>Hands-on Lab: Semantic HTML &amp; Accessibility</td>
+                <td>Ms. Linda</td>
+            </tr>
+
+            <tr>
+                <td>12:30 PM - 2:00 PM</td>
+                <td colspan="3" align="center">Lunch Break &amp; Networking Session</td>
+            </tr>
+
+            <tr>
+                <td>2:00 PM - 4:00 PM</td>
+                <td>Speed Coding Challenge</td>
+                <td>Computer Lab</td>
+                <td>Mr. Amir</td>
+            </tr>
+
+            <tr>
+                <td>4:00 PM - 5:00 PM</td>
+                <td>Closing Ceremony &amp; Prize Giving</td>
+                <td>Main Hall</td>
+                <td>Organising Committee</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Section 3: Registration Section -->
+    <section id="register">
+        <h2>Workshop Registration</h2>
+
+        <form action="register.html" method="post">
+            <p>
+                <!-- Student Information -->
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname" required>
+                <br><br>
+        
+                <label for="matric">Matric Number:</label><br>
+                <input type="text" id="matric" name="matric" required>
+                <br><br>
+  
+                <label for="email">E-mail Address:</label><br>
+                <input type="email" id="email" name="email" required>
+            </p>
+      
+            <!-- Radio Buttons: Year of Study -->
+            <p>
+                <strong>Year of Study:</strong><br>
+                <input type="radio" id="year1" name="year_of_study" value="1" required>
+                <label for="year1">Year 1</label><br>
+
+                <input type="radio" id="year2" name="year_of_study" value="2">
+                <label for="year2">Year 2</label><br>
+
+                <input type="radio" id="year3" name="year_of_study" value="3">
+                <label for="year3">Year 3</label><br>
+				<input type="radio" id="year4" name="year_of_study" value="4">
+                <label for="year4">Year 4</label>
+            </p>
+      
+            <!-- Checkboxes: Sessions to Join -->
+            <p>
+                <strong>Sessions to Attend:</strong><br>
+                <input type="checkbox" id="sess1" name="sessions[]" value="keynote">
+                <label for="sess1">Morning Keynote</label><br>
+
+                <input type="checkbox" id="sess2" name="sessions[]" value="workshop">
+                <label for="sess2">Hands-on Web Workshop</label><br>
+
+                <input type="checkbox" id="sess3" name="sessions[]" value="challenge">
+                <label for="sess3">Speed Coding Challenge</label>
+            </p>
+      
+            <!-- Drop-down Menu: Programme or Faculty -->
+            <p>
+                <label for="programme">Programme / Faculty:</label><br>
+                <select id="programme" name="programme" required>
+                    <option value="">-- Select Your Programme --</option>
+                    <option value="cs">Computer Science</option>
+                    <option value="se">Software Engineering</option>
+                    <option value="it">Information Technology</option>
+                    <option value="is">Information Systems</option>
+                </select>
+            </p>
+        
+            <p>
+                <input type="submit" value="Register Now">  
+            </p>
+        </form>
+    </section>
+
+</main>
+
+<!-- Footer Section with Organiser and Copyright Entity -->
+<footer>
+    <p>Organised by the Faculty Computer Club. &copy; 2026 All Rights Reserved.</p>
+</footer>
