@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Course Feedback</title>
+</head>
+<body>
+    <!-- 
+    List of Errors and Fixed:
+    - Error 1 (Line 10): Changed wrong closing tag </head> to </header>.
+    - Error 2 (Line 20): Changed <td>Rating</td> to <th>Rating</th> for the table header.
+    - Error 3 (Line 28): Remove extra colspan="3" so the table column align properly.
+    - Error 4 (Line 32): Fixed missing tag to the correctly seperate "Semantic HTML" and "4.0" into two cells.
+    - Error 5 (Line 39 & 40): Changed input id="fullname" to id="name" so it matches the label.
+    - Error 6 (Line 42 & 44): Changed both radio button names to name="rating" so only one can be selected.
+    - Error 7 (Line 49): Fixed typo </from> to </form>.
+    - Error 8 (Line 52): Add semicolon to &copy; for correct HTML entity format.
+    -->
+	`
+    <!-- Header Section -->
+    <header>
+        <h1>CSF3133 Course Feedback</h1>
+    </header>
+	
+	<!-- Navigation Section -->
+    <nav>
+        <a href="#results">Results</a> | 
+        <a href="#form">Feedback Form</a> | 
+        <a href="#comments">Student Comments</a>
+    </nav>
+	
+    <!-- Results Section -->
+    <section id="results">
+        <h2>Feedback Summary</h2>
+        <table border="1">
+            <tr>
+                <th>Week</th>
+                <th>Topic</th>
+                <th>Rating</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Introduction to HTML</td>
+                <td>4.5</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Tables and Forms</td>
+                <td>4.2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Semantic HTML</td>
+                <td>4.0</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td rowspan="2">Mini Project</td>
+                <td>4.8</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>4.7</td>
+            </tr>
+            <tr>
+                <td colspan="2">Average Rating</td>
+                <td>4.44</td>
+            </tr>
+        </table>
+    </section>
+	
+	<!-- Form Section -->
+    <section id="form">
+        <h2>Give Your Feedback</h2>
+        <form action="submit_feedback.php" method="post">
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+			
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email"><br><br>
+			 
+            <label for="section">Section/Group:</label>
+            <select id="section" name="section">
+			<option value="group1">Section 01</option>
+            <option value="group2">Section 02</option>
+            <option value="group3">Section 03</option>
+            </select><br><br>
+			 
+            <label>Overall rating:</label><br>
+            <input type="radio" id="good" name="rating" value="good">
+            <label for="good">Good</label>
+            
+            <input type="radio" id="average" name="rating" value="average">
+            <label for="average">Average</label>
+            
+            <input type="radio" id="poor" name="rating" value="poor">
+            <label for="poor">Poor</label><br><br>
+			
+		    <input type="checkbox" id="labs" name="labs" value="yes">
+            <label for="labs">I attended all labs</label><br><br>
+			
+	        <p>Topics I want more practice on:</p>
+            <input type="checkbox" id="topic_tables" name="practice_topics" value="tables">
+            <label for="topic_tables">HTML Tables</label><br>
+			<input type="checkbox" id="topic_forms" name="practice_topics" value="forms">
+            <label for="topic_forms">HTML Forms</label><br>
+		    <input type="checkbox" id="topic_semantic" name="practice_topics" value="semantic">
+            <label for="topic_semantic">Semantic HTML</label><br><br>
+			<input type="submit" value="Submit">
+        </form>
+    </section>
+	
+	<!-- Part 2: Semantic Section for Student Comments -->
+    <section id="comments">
+        <h2>Student Comments</h2>
+        <article>
+            <h3>Maya Reena</h3>
+            <p>The lab exercises really helped my understanding of table structuring and form validation.</p>
+        </article>
+        <article>
+            <h3>Amir Danial</h3>
+            <p>The mini-project was a great way to put all HTML semantic concepts together into a clean layout.</p>
+        </article>
+    </section>
+	    <!-- Footer Section -->
+    <footer>
+        <p>Copyright &copy; 2026 CSF3133</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
