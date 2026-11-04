@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Miamore's CampusBake Online Order</title>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div id="header">
+        <h1><span>Miamore's CampusBake&reg;</span></h1>
+        <p><em>Freshly baked happiness, made for campus life &#60; 3</em></p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div id="nav">
+        <a href="#header">Home</a> |
+        <a href="#content">How to Order</a> |
+        <a href="#sidebar">Price List</a> |
+        <a href="#footer">Contact</a>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="content">
+
+        <h2>Welcome to Miamore's CampusBake&reg;</h2>
+
+        <p>
+        Welcome to <strong>Miamore's CampusBake</strong>, your favourite campus bakery is back!
+        We prepare <em>fresh</em> cupcakes and <em>scrumptious</em> cake slices every day.
+        Choose your favourite flavour and place your pre-order quickly!
+        </p>
+
+        <!-- HOW TO ORDER -->
+        <h3>How to Order</h3>
+
+        <ol>
+            <li>Enter your contact details.</li>
+			<li>Choose your pick-up date and time.</li>
+            <li>Choose your preferred flavour.</li>
+            <li>Select the quantity and check your total price.</li>
+            <li>Submit the form and collect your order.</li>
+        </ol>
+
+        <!-- ONLINE ORDER FORM -->
+        <h3>Online Order Form</h3>
+		
+		<form oninput="total.value =
+        (Number(cupcakes.value) * 3 +
+        Number(cakeSlices.value) * 5).toFixed(2)">
+
+        <!-- CUSTOMER DETAILS -->
+        <h4>Customer Details</h4>
+
+           <label for="name">Customer Name:</label>
+           <input type="text" id="name" name="name"
+           placeholder="Enter your name" required autofocus>
+           <br><br>
+
+           <label for="phone">Phone Number:</label>
+           <input type="tel" id="phone" name="phone" required>
+           <br><br>
+
+           <label for="email">E-mail:</label>
+           <input type="email" id="email" name="email" required>
+           <br><br>
+
+        <!-- PICK-UP DETAILS -->
+        <h4>Pick-up Details</h4>
+
+            <label for="date">Pick-up Date:</label>
+            <input type="date" id="date" name="date">
+            <br><br>
+
+            <label for="time">Pick-up Time:</label>
+            <input type="time" id="time" name="time">
+            <br><br>
+
+        <!-- PRODUCT PREFERENCES -->
+        <h4>Product Preferences</h4>
+
+            <label for="flavour">Choose a flavour:</label>
+            <input list="flavours" id="flavour" name="flavour">
+
+                <datalist id="flavours">
+                    <option value="Chocolate">
+                    <option value="Vanilla">
+                    <option value="Strawberry">
+                    <option value="Red Velvet">
+                </datalist>
+
+                <br><br>
+
+            <label for="icingColour">Icing colour:</label>
+            <input type="color" id="icingColour"
+            name="icingColour" value="#ff69b4">
+            <br><br>
+
+            <label for="sweetness">Sweetness Level (1-5) :</label>
+            <input type="range" id="sweetness"
+            name="sweetness" min="1" max="5" step="1">
+            <br><br>
+
+            <!-- PRICE CALCULATOR -->
+            <h4>Price Calculator</h4>
+
+            <label for="cupcakes">Cupcakes (RM 3.00 each):</label>
+            <input type="number" id="cupcakes"
+            name="cupcakes" min="0" value="0">
+            <br><br>
+
+            <label for="cakeSlices">Cake Slices (RM 5.00 each):</label>
+            <input type="number" id="cakeSlices"
+            name="cakeSlices" min="0" value="0">
+            <br><br>
+
+            <p>
+              Total Price: RM
+              <output name="total"
+              for="cupcakes cakeSlices">0.00</output>
+            </p>
+
+            <!-- SUBMIT BUTTON -->
+            <button type="submit">Submit Order</button>
+            
+
+        </form>
+
+        <!-- IMPORTANT INFORMATION -->
+        <h3>Friendly Reminder</h3>
+
+        <blockquote>
+            Please check your order details before submit to us.
+            Orders &#62; 10 pieces receive one free drink, yippie !!
+        </blockquote>
+
+    </div>
+
+    <!-- SIDEBAR: PRICE LIST -->
+    <div id="sidebar">
+
+        <h2>Price List</h2>
+
+        <ul>
+            <li>Chocolate Cupcake - RM 3.00</li>
+            <li>Strawberry Cupcake - RM 3.00</li>
+            <li>Vanilla Cupcake - RM 3.00</li>
+            <li>Red Velvet Cupcake - RM 3.00</li>
+            <li>Chocolate Cake Slice - RM 5.00</li>
+            <li>Red Velvet Cake Slice - RM 5.00</li>
+        </ul>
+
+    </div>
+    
+	<!-- FOOTER -->
+    <div id="footer">
+	<p>Contact us: Miamorescampusbake@example.com</p> 
+    <hr>
+    
+    <p>
+      Copyright &copy; 2026 Miamore's CampusBake&reg;. All Rights Reserved. 
+	  &nbsp;|&nbsp; Operating Hours: 8:00 AM &ndash; 6:00 PM
+    </p>
+  </div>
+
+</body>
+</html>
+
+<!--
+TESTING OBSERVATIONS
+
+1. When Submit is clicked with all fields empty,
+   the browser prevents submission because the required
+   fields are empty.
+
+2. When "myemail" is entered in the e-mail field,
+   the browser prevents submission because it is not
+   a valid e-mail address.
+-->
+
