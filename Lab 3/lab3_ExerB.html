@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ticket Booking</title>
+</head>
+<body>
+    <!--
+        ERRORS FOUND AND FIXED:
+        1. Line 1: Missing 'html' in '<!DOCTYPE>'. Changed to '<!DOCTYPE html>'.
+        2. Line 9: Bad tags in '<span...</h1></span>'. Changed to '<h1>e-Ticket <span>Your Campus Cinema</span></h1>'.
+        3. Line 11 & 36: Cannot put big blocks like <h2> and <form> inside <span>. Changed '<span id="content">' to '<div id="content">'.
+        4. Line 13: The '<' symbol must be written as '&lt;'.
+        5. Line 14: Adding "2" + "3" made "23" because they were text. Added parseInt() so it adds numbers (2 + 3 = 5).
+        6. Line 18: Spelling error 'type="emial"'. Changed to 'type="email"'.
+        7. Line 22 & 23: The names did not match ('list="movies"' vs 'id="movielist"'). Changed to 'list="movielist"'.
+        8. Line 32: Slider numbers were backwards ('min="5" max="1"'). Changed to 'min="1" max="5"'.
+        9. Line 33: The output 'for' had 'kid' instead of 'child'. Changed to 'for="adult child"'.
+        10. Line 38: Capital letter in '&Copy;'. Changed to lowercase '&copy;'.
+        11. Lines 41 & 55: Extra junk text ('</html>54 </body>' and '</html>'). Deleted them.
+    -->
+
+    <!-- Header Section -->
+    <div id="header">
+        <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+    </div>
+
+    <!-- Main Content Section -->
+    <div id="content">
+        <h2>Book Your Ticket</h2>
+        <p>Promotion: tickets &lt; RM10 for students &amp; staff!</p>
+
+        <!-- Form Section -->
+        <form action="booking.php" oninput="
+            total.value = parseInt(adult.value || 0) + parseInt(child.value || 0);
+            price.value = (parseInt(adult.value || 0) * 12) + (parseInt(child.value || 0) * 8);
+        ">
+            <!-- Name input -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus><br>
+
+            <!-- Step 6: Phone number input -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="012-3456789" required><br>
+
+            <!-- Email input -->
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <!-- Show date input -->
+            <label for="date">Show date:</label>
+            <input type="date" id="date" name="date"><br>
+
+            <!-- Step 6: Show time input -->
+            <label for="time">Show time:</label>
+            <input type="time" id="time" name="time"><br>
+
+            <!-- Movie list -->
+            <label for="movie">Movie:</label>
+            <input id="movie" name="movie" list="movielist"><br>
+            <datalist id="movielist">
+                <option value="KUDRAT 1968: HIGH COUNCIL">
+                <option value="PAPA ZOLA THE MOVIE">
+				<option value="EJEN ALI: THE MOVIE 2">
+            </datalist>
+
+            <!-- Ticket count -->
+            <label for="adult">Adult tickets:</label>
+            <input type="number" id="adult" name="adult" value="0" min="0"><br>
+
+            <label for="child">Child tickets:</label>
+            <input type="number" id="child" name="child" value="0" min="0"><br>
+
+            <!-- Service rating slider -->
+            <label for="rating">Rate our service:</label>
+            <input type="range" id="rating" name="rating" min="1" max="5"><br>
+
+            <!-- Step 7: Outputs for total tickets and total price -->
+            Total tickets: <output name="total" for="adult child">0</output><br>
+            Total price (RM): <output name="price" for="adult child">0</output><br>
+
+            <input type="submit" value="Book Now">
+        </form>
+    </div>
+
+    <!-- Step 5: Sidebar with 3 movies -->
+    <div id="sidebar">
+        <h3>Now Showing</h3>
+        <ul>
+            <li>
+                <strong>KUDRAT 1968: HIGH COUNCIL</strong> - <span>(16)</span> - 
+                <a href="https://youtu.be/-vwMZL9fi_M?si=gX5f7i4rslEw48cV" target="_blank">Watch Trailer</a>
+            </li>
+            <li>
+                <strong>PAPA ZOLA THE MOVIE</strong> - <span>(U)</span> - 
+                <a href="https://youtu.be/JDJDkld6f48?si=KXCIa5uTbsLvKOSy" target="_blank">Watch Trailer</a>
+            </li>
+            <li>
+                <strong>EJEN ALI: THE MOVIE 2</strong> - <span>(U)</span> - 
+                <a href="https://youtu.be/OF6njluHNAk?si=R43NYRA9Bo8ZAJ1d" target="_blank">Watch Trailer</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Step 8: Footer -->
+    <div id="footer">
+        <hr>
+        <p>&copy; 2026 CinemaCampus. All rights reserved.</p>
+        <p>e-Ticket&reg; &ndash; Campus Cinema &lt; RM10 every Tuesday &amp; discounts available.</p>
+    </div>
+</body>
+</html>
