@@ -1,0 +1,291 @@
+/* =========================================================
+   Global Reset & Layout Styling
+========================================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #3a4d5e;
+  background-color: #f7fafd; 
+  line-height: 1.6;
+}
+
+/* Responsive container widths for main sections */
+header, section, footer {
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* =========================================================
+   Headings & Text Decoration
+========================================================= */
+h1 {
+  text-decoration: overline;
+  font-size: 2rem;
+  text-align: center;
+  color: #4a7c9d; 
+  margin-bottom: 10px;
+}
+
+h2 {
+  text-decoration: underline;
+  font-size: 1.5rem;
+  color: #6497b1; 
+  margin-bottom: 15px;
+}
+
+header p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #627d92;
+}
+
+/* =========================================================
+   Navigation Bar Styling
+========================================================= */
+nav {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+nav ul {
+  list-style-type: none;
+  background-color: #7ba7c2; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* =========================================================
+   Interactive Link States (LVHA Order)
+========================================================= */
+a:link {
+  color: #ffffff;
+}
+
+a:visited {
+  color: #e3f2fd;
+}
+
+a:hover {
+  color: #ffffff;
+  background-color: #6497b1;
+}
+
+a:active {
+  color: #ffffff;
+  background-color: #4a7c9d;
+}
+
+/* Footer links */
+footer a:link {
+  color: #6497b1;
+}
+
+footer a:visited {
+  color: #8bb8d0;
+}
+
+footer a:hover {
+  color: #3b6680;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/* =========================================================
+   ID & Class Selectors: Destination Section
+========================================================= */
+#destinations {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e1ebf2;
+}
+
+.card {
+  background-color: #f7fafd;
+  border: 1px solid #dce8f0;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: #4a7c9d;
+  margin-bottom: 6px;
+}
+
+.price {
+  font-size: 1.1rem;
+  margin-top: 8px;
+  color: #4a7c9d;
+  font-weight: bold;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #9cb3c4;
+  margin-right: 8px;
+  font-weight: normal;
+}
+
+.meter-box {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #edf4f8;
+  border-radius: 6px;
+}
+
+meter {
+  width: 200px;
+  height: 18px;
+}
+
+/* =========================================================
+   ID Selector: Media (Video) Section
+========================================================= */
+#video {
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #e1ebf2;
+  border-radius: 8px;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.caption {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #728a9c;
+  margin-top: 8px;
+}
+
+/* =========================================================
+   ID & Class Selectors: Trip Registration Form 
+========================================================= */
+#trip {
+  background-color: #ffffff;
+  border: 1px solid #e1ebf2;
+  border-radius: 8px;
+}
+
+.trip-form {
+  background-color: #f4f8fb; 
+  border: 1px solid #dbe6ef;
+  border-radius: 6px;
+  padding: 20px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.trip-form label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #45657d;
+}
+
+.trip-form input[type="text"],
+.trip-form input[type="email"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border: 1px solid #cadbe7;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #3a4d5e;
+  font-size: 1rem;
+  outline: none;
+}
+
+.trip-form input[type="text"]:focus,
+.trip-form input[type="email"]:focus {
+  border-color: #7ba7c2;
+  box-shadow: 0 0 0 3px rgba(123, 167, 194, 0.2);
+}
+
+
+.trip-form .form-group {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.trip-form .group-label {
+  display: block;
+  font-weight: bold;
+  color: #45657d;
+  margin-bottom: 8px;
+}
+
+.trip-form .options-row {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.trip-form .options-row label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: normal;
+  margin: 0;
+  cursor: pointer;
+}
+
+.trip-form button {
+  display: inline-block;
+  background-color: #7ba7c2; 
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.trip-form button:hover {
+  background-color: #6497b1;
+}
+
+/* =========================================================
+   Footer Styling
+========================================================= */
+footer {
+  text-align: center;
+  border-top: 1px solid #e1ebf2;
+  font-size: 0.9rem;
+  color: #728a9c;
+}
+
+address {
+  font-style: normal;
+  margin-top: 5px;
+}
