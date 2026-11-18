@@ -1,0 +1,128 @@
+
+/* 1. Body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F2F2F2;
+    margin: 0;
+	
+}
+
+/* 2. Header styling */
+header {
+    background-image: url("books.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+/* Heading font */
+h1, h2 {
+    font-family: 'Merriweather', serif;
+	
+}
+
+/* 3. Navigation bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Navigation hover effect */
+li a:hover {
+    background-color: #111;
+}
+
+/* Active Home link */
+.active {
+    background-color: #04AA6D;
+}
+
+/* 4. Main content */
+main {
+    width: 90%;
+    max-width: 980px;
+    margin: 20px auto;
+}
+
+h2 {
+    color: #1B4F72;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* 5. Table styling */
+#products {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#products td, #products th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Table heading */
+#products th {
+    background-color: #1B4F72;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* Alternating row colours */
+#products tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Table hover effect */
+#products tr:hover {
+    background-color: #ddd;
+}
+
+/* Align price to the right */
+#products td:last-child {
+    text-align: right;
+}
+
+/* 6. Footer styling */
+footer {
+    background-color: #EFE6D8;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    li {
+        float: none;
+    }
+
+    header {
+        padding: 25px;
+    }
+
+    main {
+        width: 95%;
+    }
+}
