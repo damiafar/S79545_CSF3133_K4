@@ -1,0 +1,101 @@
+/* General Page Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+header {
+    background-color: #1f4e78;
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    margin: 0 0 5px 0;
+}
+
+/* Card Sections */
+.card {
+    background-color: white;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+/* Buttons with Hover Effect */
+button {
+    padding: 8px 16px;
+    background-color: #2b6cb0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: #1a4971;
+}
+
+/* Battle Display & Fixed Image Size */
+.battle-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.battle-area img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.vs {
+    font-size: 24px;
+    font-weight: bold;
+    color: #666;
+}
+
+#result {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* History Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #1f4e78;
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 20px;
+}
